@@ -19,17 +19,22 @@
   </header>
 
   <div class="wrapper">
+    <span class="icon-close">
+      <ion-icon name="close-outline"></ion-icon>
+    </span>
+
     <div class="form-box login">
       <h2>Login</h2>
       <form action="#">
-        <div class="input-box">
+        <div class="input-group">
           <span class="icon"><ion-icon name="mail"></ion-icon></span>
-          <input type="email">
+          <input type="email" required>
           <label>Email</label>
         </div>
-        <div class="input-box">
+        
+        <div class="input-group">
           <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-          <input type="password">
+          <input type="password" required>
           <label>Password</label>
         </div>
         <div class="remember-forgot">
@@ -39,6 +44,37 @@
         <button class="btn">Login</button>
         <div class="login-register">
           <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <div class="form-box register">
+      <h2>Registration</h2>
+      <form action="#">
+        <div class="input-group">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input type="text" required>
+          <label>Username</label>
+        </div>
+
+        <div class="input-group">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+        
+        <div class="input-group">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox">I agree to the terms & conditions</label>
+          
+        </div>
+        <button class="btn">Register</button>
+        <div class="login-register">
+          <p>Already have an account? <a href="#" class="login-link">Login</a></p>
         </div>
       </form>
     </div>
