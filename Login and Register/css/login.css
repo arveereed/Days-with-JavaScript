@@ -1,4 +1,5 @@
 .wrapper {
+  margin-top: 70px;
   position: relative;
   width: 400px;
   height: 440px;
@@ -10,8 +11,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
+  overflow: hidden;
+  transition: height .2s ease, transform .5s ease;
+  transform: scale(0);
 }
+
+.wrapper.active-popup {
+  transform: scale(1);
+}
+
+.wrapper.active { height: 520px; }
 
 .wrapper .icon-close {
   position: absolute;
@@ -35,14 +44,30 @@
   padding: 40px;
 }
 
+/* LOGIN */
 .wrapper .form-box.login {
- /*  display: none; */
+  transition: transform .28s ease;
+  transform: translateX(0);
 }
 
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+
+/* REGISTER */
 .wrapper .form-box.register {
   transform: translateX(400px);
   position: absolute;
+  transition: none;
 }
+
+.wrapper.active .form-box.register {
+  transition: transform .28s ease;
+  transform: translateX(0);
+}
+
 
 .form-box h2 {
   font-size: 2em;
