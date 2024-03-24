@@ -445,6 +445,11 @@ main .recent-orders a {
   cursor: pointer;
 }
 
+.right .sales-analytics .add-product:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
 .right .sales-analytics .add-product div {
   display: flex;
   align-items: center;
