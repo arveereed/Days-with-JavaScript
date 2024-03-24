@@ -4,6 +4,7 @@ const sideMenu = document.querySelector('aside');
 const menuBtn = document.getElementById('menu-btn');
 const closeBtn = document.getElementById('close-btn');
 const themeToggler = document.querySelector(".theme-toggler");
+const anchors = document.querySelectorAll('a');
 
 menuBtn.addEventListener('click', () => {
   sideMenu.style.display = 'block';
@@ -19,7 +20,13 @@ themeToggler.addEventListener('click', () => {
   themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
 });
 
-console.log(orders);
+anchors.forEach(anchor => {
+  anchor.addEventListener('click', () => {
+
+    anchors.forEach(a => a.classList.remove('active'));
+    anchor.classList.add('active');
+  });
+});
 
 // fill orders in table
 orders.forEach(order => {
