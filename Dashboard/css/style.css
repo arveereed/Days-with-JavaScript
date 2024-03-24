@@ -151,6 +151,8 @@ aside .sidebar a span {
   transition: all 300ms ease;
 }
 
+aside .sidebar a .message-count { color: #fff; }
+
 aside .sidebar a:last-child {
   position: absolute;
   bottom: calc(2rem - 3rem); 
@@ -174,6 +176,8 @@ aside .sidebar a.active span {
   color: var(--color-primary);
   margin-left: calc(1rem - 3px);
 }
+
+aside .sidebar a.active .message-count { color: #fff; }
 
 aside .sidebar a:hover { color: var(--color-primary); }
 
