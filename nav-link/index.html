@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#" data-content="home" class="nav-link">Home</a></li>
+      <li><a href="#" data-content="about" class="nav-link">About</a></li>
+      <li><a href="#" data-content="services" class="nav-link">Services</a></li>
+      <li><a href="#" data-content="contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <div id="home" class="content-container active">
+      <p>Welcome to the home page!</p>
+    </div>
+
+    <div id="about" class="content-container">
+      <p>About us: We are a company that does X, Y, and Z.</p>
+    </div>
+
+    <div id="services" class="content-container">
+      <p>Our services include A, B, and C.</p>
+    </div>
+    
+    <div id="contact" class="content-container">
+      <p>Contact us at contact@example.com.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
