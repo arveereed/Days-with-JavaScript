@@ -1,16 +1,29 @@
-const api_url = "https://api.quotable.io/quotes/random";
 const quote = document.getElementById('quote');
 const author = document.getElementById('author');
 const newQuoteBtn = document.getElementById("new-quote-btn");
 const tweetBtn = document.getElementById('tweet-btn');
 
-async function getQuote(url) {
-  const response = await fetch(url);
-  let data = await response.json();
+async function getQuote() {
+  try {
+      const response = await fetch("js/quotes.json");
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
 
-  quote.innerHTML = data[0].content;
-  author.innerHTML = data[0].author;
+      const data = await response.json();
+      const index = Math.floor(Math.random() * data.quotes.length);
+      const randomQuote = data.quotes[index];
+
+      quote.innerHTML = randomQuote.text;
+      author.innerHTML = randomQuote.author;
+
+  } catch(error) {
+    console.error("Error fetching the quote:", error);
+  }
+
+
 }
+
 
 function tweet() {
   window.open(
@@ -20,10 +33,10 @@ function tweet() {
   );
 }
 
-getQuote(api_url);
+getQuote();
 
 newQuoteBtn.addEventListener('click', () => {
-  getQuote(api_url);
+  getQuote();
 });
 
 tweetBtn.addEventListener('click', () => {
