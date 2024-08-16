@@ -1,4 +1,4 @@
 ### Dark Theme
 
-## Screenshot
+# Screenshot
 ![screenshot](screenshot.png)
